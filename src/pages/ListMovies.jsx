@@ -5,6 +5,7 @@ import { ArrowLeftOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import Profile from "../components/Profile";
 import Card from "../components/Card";
+import Skeleton from "../components/Skeleton";
 
 const ListMovies = () => {
   const history = useNavigate();
@@ -45,11 +46,7 @@ const ListMovies = () => {
           </Col>
         </>
       ) : (
-        <Col span={24}>
-          <h1 style={{ margin: "auto" }}>
-            No se encontró datos del actor, intente con otra fotografía
-          </h1>
-        </Col>
+        <Skeleton />
       )}
     </Row>
   );

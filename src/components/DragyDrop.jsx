@@ -23,9 +23,9 @@ const DragyDrop = () => {
       const { status } = info.file;
       if (status !== "uploading") {
         if (info.file.response.actorName) {
+          history("/lista-peilculas");
           nameActor = info.file.response.actorName;
           callTheMovieDatabase(nameActor);
-          history("/lista-peilculas");
         } else {
           message.error(
             `${info.file.name} No se ha encontrado información con esta fotografia.`
