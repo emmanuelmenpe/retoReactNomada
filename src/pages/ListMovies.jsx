@@ -19,6 +19,37 @@ const ListMovies = () => {
     deleteInfoActor();
   };
 
+  const fecha = (date) => {
+    let day, month, year;
+    const fecha = new Date(date);
+    const months = [
+      "enero",
+      "febrero",
+      "marzo",
+      "abril",
+      "mayo",
+      "junio",
+      "julio",
+      "agosto",
+      "septiembre",
+      "octubre",
+      "noviembre",
+      "diciembre",
+    ];
+
+    day = fecha.getDate();
+    month = fecha.getMonth();
+    year = fecha.getFullYear();
+
+    months.find((e, i) => {
+      if (i === month) {
+        month = months[i];
+      }
+    });
+
+    return day + " de " + month + " de " + year;
+  };
+
   return (
     <Row>
       <Col span={24}>
@@ -41,7 +72,7 @@ const ListMovies = () => {
           <Col span={16}>
             <Title style={{ paddingLeft: "10%" }}>Películas:</Title>
             {dataActor.map((info, index) => (
-              <Card data={info} id={index} key={index} />
+              <Card data={info} id={index} key={index} fecha={fecha} />
             ))}
           </Col>
         </>

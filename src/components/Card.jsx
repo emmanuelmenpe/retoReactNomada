@@ -4,39 +4,9 @@ import { StarFilled } from "@ant-design/icons";
 import { URL_IMG_TMDB } from "../variables";
 
 const { Title, Paragraph } = Typography;
-let day, month, year;
 
-const fecha = (date) => {
-  const fecha = new Date(date);
-  const months = [
-    "enero",
-    "febrero",
-    "marzo",
-    "abril",
-    "mayo",
-    "junio",
-    "julio",
-    "agosto",
-    "septiembre",
-    "octubre",
-    "noviembre",
-    "diciembre",
-  ];
+const UseCard = ({ data, fecha }) => {
 
-  day = fecha.getDate();
-  month = fecha.getMonth();
-  year = fecha.getFullYear();
-
-  months.find((e, i) => {
-    if (i === month) {
-      month = months[i];
-    }
-  });
-
-  return day + " de " + month + " de " + year;
-};
-
-const UseCard = ({ data }) => {
   return (
     <div style={{ paddingLeft: "10%", paddingRight: "10%" }}>
       {data.known_for.map((movie, index) => (
