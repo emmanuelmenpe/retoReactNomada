@@ -9,10 +9,11 @@ Pequeña app web para poder buscar información de actores y sus películas medi
 # Configurar entorno
 
 - Tener [Node](https://nodejs.org/en/) instalado, ingresar desde terminal al proyecto y ejecutar **npm install**
-- Obtener la key de who is de Nomada (https://whois.nomada.cloud/get-key/tu-email-de-linkedin@dominio.com)
-- Agregar la key de who is en la constante **KEY_NOMADA** dentro del archivo **/src/variables.js**
-- Obtener la key de [themoviedb](https://www.themoviedb.org/)
-- Agregar la key de themoviedb en la constante **API_KEY_TMDB** dentro del archivo **/src/variables.js**
+- Agregar las siguientes variables en **/src/variables.js**:
+<br>
+export const KEY_NOMADA="MjFlZTJhZGItZjEzMC00YWNkLTg0YWItYjM1N2U2NmNiYTQ0"
+<br>
+export const API_KEY_TMDB="5b468352e6753da9f7d079032467dc28" 
 
 # Iniciar App
 
